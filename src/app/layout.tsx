@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import styles from "@/app/_styles/globals.module.scss";
 
 export const metadata: Metadata = {
   title: "NextJS Template",
@@ -7,7 +8,7 @@ export const metadata: Metadata = {
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => (
   <html lang="en">
-    <body>{children}</body>
+    <body className={styles["page-body"]}>{children}</body>
   </html>
 );
 
