@@ -1,0 +1,162 @@
+@charset 'utf-8';
+
+/* Theme colors */
+$colors: (
+  'primary': (
+    '300': '#B7E7AF',
+    '600': '#80B578',
+    '900': '#4E8046',
+  ),
+  'secondary': (
+    '300': '#F9D8A8',
+    '600': '#D1AC74',
+    '900': '#947546',
+  ),
+  'red': (
+    '300': '#FF9F9F',
+    '600': '#DA5F5F',
+    '900': '#9D3737',
+  ),
+  'neutral': (
+    'white': '#FFFFFF',
+    '100': '#E1E8E0',
+    '300': '#A3A8A2',
+    '500': '#6C706B',
+    '700': '#424542',
+    '900': '#1A1D19',
+  ),
+);
+
+/* Typography variables */
+$typography: (
+  'heading': (
+    'family': 'Cormorant Garamond',
+    'weight': 600,
+    'line-height': 125%,
+    'size': (
+      'h1': 40px,
+      'h2': 32px,
+      'h3': 24px,
+      'h4': 18px,
+      'h5': 14px,
+    ),
+  ),
+  'body': (
+    'family': 'Montserrat',
+    'weight': (
+      'regular': 400,
+      'medium': 500,
+    ),
+    'line-height': 150%,
+    'size': (
+      'large': 16px,
+      'medium': 14px,
+      'small': 12px,
+    ),
+  ),
+  'label': (
+    'family': 'Montserrat',
+    'weight': (
+      'regular': 400,
+      'semibold': 600,
+    ),
+    'line-height': 125%,
+    'size': (
+      'large': 16px,
+      'medium': 14px,
+      'small': 12px,
+    ),
+  ),
+);
+
+/* Headings */
+@mixin heading($size) {
+  font-family: map-get($typography, 'heading', 'family');
+  font-weight: map-get($typography, 'heading', 'weight');
+  line-height: map-get($typography, 'heading', 'line-height');
+  font-size: map-get($typography, 'heading', 'size', $size);
+}
+
+.h1 {
+  @include heading('h1');
+}
+
+.h2 {
+  @include heading('h2');
+}
+
+.h3 {
+  @include heading('h3');
+}
+
+.h4 {
+  @include heading('h4');
+}
+
+.h5 {
+  @include heading('h5');
+}
+
+/* Body Copy */
+@mixin body-copy($weight, $size) {
+  font-family: map-get($typography, 'body', 'family');
+  font-weight: map-get($typography, 'body', 'weight', $weight);
+  line-height: map-get($typography, 'body', 'line-height');
+  font-size: map-get($typography, 'body', 'size', $size);
+}
+
+.p1-r {
+  @include body-copy('regular', 'large');
+}
+
+.p1-b {
+  @include body-copy('medium', 'large');
+}
+
+.p2-r {
+  @include body-copy('regular', 'medium');
+}
+
+.p2-b {
+  @include body-copy('medium', 'medium');
+}
+
+.p3-r {
+  @include body-copy('regular', 'small');
+}
+
+.p3-b {
+  @include body-copy('medium', 'small');
+}
+
+/* Labels */
+@mixin label($weight, $size) {
+  font-family: map-get($typography, 'label', 'family');
+  font-weight: map-get($typography, 'label', 'weight', $weight);
+  line-height: map-get($typography, 'label', 'line-height');
+  font-size: map-get($typography, 'label', 'size', $size);
+}
+
+.l1-r {
+  @include label('regular', 'large');
+}
+
+.l1-b {
+  @include label('semibold', 'large');
+}
+
+.l2-r {
+  @include label('regular', 'medium');
+}
+
+.l2-b {
+  @include label('semibold', 'medium');
+}
+
+.l3-r {
+  @include label('regular', 'small');
+}
+
+.l3-b {
+  @include label('semibold', 'small');
+}
