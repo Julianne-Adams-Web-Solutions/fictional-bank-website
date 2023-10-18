@@ -4,6 +4,7 @@
 @import 'base/base';
 @import 'base/fonts';
 @import 'base/typography';
+@import 'base/variables';
 
 @import 'layout/navigation';
 @import 'layout/header';
@@ -12,6 +13,7 @@
 
 @import 'components/button';
 @import 'components/card';
+@import 'components/navbar';
 
 @import 'pages/home';
 
