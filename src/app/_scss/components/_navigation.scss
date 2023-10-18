@@ -1,0 +1,38 @@
+@use '../themes/default' as theme;
+@import '../base/typography';
+
+.navigation {
+  @extend .l1-b;
+  display: flex;
+  flex-flow: row nowrap;
+  list-style: none;
+  gap: 24px;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation__item__link {
+  display: inline-block;
+  padding: 12px 0px 12px 0px;
+  text-decoration: none;
+  color: map-get(theme.$colors, 'neutral', '500');
+  transition: 0.5s ease;
+}
+
+.navigation__item__link:hover {
+  text-decoration: none;
+  color: map-get(theme.$colors, 'neutral', '300');
+}
+
+.navigation__item__link-active {
+  @extend .navigation__item__link;
+  display: flex;
+  align-items: center;
+  color: map-get(theme.$colors, 'primary', '900');
+  border-bottom: 2px solid map-get(theme.$colors, 'primary', '900');
+}
+
+.navigation__item__link-active:hover {
+  color: map-get(theme.$colors, 'primary', '600');
+  border-bottom: 2px solid map-get(theme.$colors, 'primary', '600');
+}
