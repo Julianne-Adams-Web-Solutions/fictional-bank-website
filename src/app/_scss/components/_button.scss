@@ -14,6 +14,12 @@
       color: map-get(theme.$colors, 'neutral', 'white');
       background-color: map-get(theme.$colors, 'primary', '900');
       border-color: map-get(theme.$colors, 'primary', '900');
+      transition: 0.5s ease;
+    }
+
+    &.primary:hover {
+      color: map-get(theme.$colors, 'primary', '900');
+      background-color: rgba(0, 0, 0, 0%);
     }
   }
 
@@ -22,6 +28,12 @@
       color: map-get(theme.$colors, 'neutral', '500');
       background-color: rgba(0, 0, 0, 0%);
       border-color: map-get(theme.$colors, 'neutral', '500');
+      transition: 0.5s ease;
+    }
+
+    &.neutral:hover {
+      background-color: map-get(theme.$colors, 'neutral', '500');
+      color: map-get(theme.$colors, 'neutral', 'white');
     }
   }
 }
