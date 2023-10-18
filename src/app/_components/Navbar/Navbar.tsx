@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import logo from "@/app/_public/images/logo-no-background.svg";
 import Button from "@/app/_components/Button/Button";
 import Navigation from "./Navigation/Navigation";
@@ -11,12 +12,16 @@ const Navbar = () => (
         <Navigation />
       </div>
       <div className="navbar__button-container">
-        <Button type="button" buttonStyle="outline" color="neutral">
-          Open An Account
-        </Button>
-        <Button type="button" buttonStyle="solid" color="primary">
-          Log In
-        </Button>
+        <Link href="/open-account">
+          <Button type="button" buttonStyle="outline" color="neutral">
+            Open An Account
+          </Button>
+        </Link>
+        <Link href="/login">
+          <Button type="button" buttonStyle="solid" color="primary">
+            Log In
+          </Button>
+        </Link>
       </div>
     </div>
   </div>
