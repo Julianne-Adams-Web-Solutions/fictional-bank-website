@@ -1,5 +1,6 @@
 export type ButtonStyle = "solid" | "outline" | "light" | "ghost";
 export type ButtonColor = "primary" | "secondary" | "neutral";
+export type ButtonWidth = "normal" | "wide";
 
 /**
  * A simple button component.
@@ -16,16 +17,18 @@ const Button = ({
   type,
   buttonStyle,
   color,
+  width = "normal",
   children,
 }: {
   type: string;
   buttonStyle: ButtonStyle;
   color: ButtonColor;
+  width: ButtonWidth | undefined;
   children: React.ReactNode;
 }) => (
   <button
     type={type === "submit" ? "submit" : "button"}
-    className={`button ${buttonStyle} ${color}`}
+    className={`button ${buttonStyle} ${color} ${width}`}
   >
     {children}
   </button>

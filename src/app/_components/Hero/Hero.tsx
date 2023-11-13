@@ -1,5 +1,6 @@
 import Image from "next/image";
 import heroImage from "../../_public/images/hero.jpg";
+import LoginForm from "./LoginForm/LoginForm";
 
 const Hero = () => (
   <div className="hero">
@@ -17,6 +18,9 @@ const Hero = () => (
       <h1 className="hero-text">
         World&apos;s leading traditional bank for over 50 years.
       </h1>
+      <div className="login-form-container">
+        <LoginForm />
+      </div>
     </div>
   </div>
 );

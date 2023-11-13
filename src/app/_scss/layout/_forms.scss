@@ -1,0 +1,20 @@
+@use '../themes/default' as theme;
+@import '../base/typography';
+
+.text-input-container {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.text-input-label {
+  @extend .l1-r;
+  color: map-get(theme.$colors, 'neutral', '700');
+}
+
+.text-input {
+  @extend .p2-r;
+  height: 32px;
+  border: 2px solid map-get(theme.$colors, 'neutral', '300');
+  border-radius: 5px;
+  outline-color: map-get(theme.$colors, 'neutral', '300');
+}

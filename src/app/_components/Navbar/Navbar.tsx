@@ -13,12 +13,22 @@ const Navbar = () => (
       </div>
       <div className="navbar__button-container">
         <Link href="/open-account">
-          <Button type="button" buttonStyle="outline" color="neutral">
+          <Button
+            type="button"
+            buttonStyle="outline"
+            color="neutral"
+            width="normal"
+          >
             Open An Account
           </Button>
         </Link>
         <Link href="/login">
-          <Button type="button" buttonStyle="solid" color="primary">
+          <Button
+            type="button"
+            buttonStyle="solid"
+            color="primary"
+            width="normal"
+          >
             Log In
           </Button>
         </Link>

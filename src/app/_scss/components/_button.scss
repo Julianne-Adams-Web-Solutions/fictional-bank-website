@@ -36,4 +36,8 @@
       color: map-get(theme.$colors, 'neutral', 'white');
     }
   }
+
+  &.wide {
+    width: 100%;
+  }
 }

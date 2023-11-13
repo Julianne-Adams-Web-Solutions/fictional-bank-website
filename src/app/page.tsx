@@ -1,10 +1,5 @@
 import Hero from "@/app/_components/Hero/Hero";
 
-const Home = () => (
-  <>
-    <Hero />
-    <main>Hello</main>
-  </>
-);
+const Home = () => <Hero />;
 
 export default Home;
